@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover amazing products that will transform your daily routine and improve your lifestyle.">
-    <title>Premium Products | Transform Your Lifestyle</title>
+    <meta name="description" content="Discover amazing men's flannel shirts and hoodies that will transform your casual wardrobe and improve your style.">
+    <title>Premium Men's Flannel Collection | Style & Comfort</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,6 +74,7 @@
         img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
         
         .container {
@@ -103,14 +104,6 @@
             box-shadow: var(--box-shadow);
         }
         
-        .btn-accent {
-            background-color: var(--accent-color);
-        }
-        
-        .btn-accent:hover {
-            background-color: #d8005e;
-        }
-        
         .section {
             padding: 5rem 0;
         }
@@ -136,14 +129,19 @@
             padding: 1rem 0;
         }
         
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark-color);
+        .logo-container {
+            display: flex;
+            align-items: center;
         }
         
-        .logo span {
-            color: var(--primary-color);
+        .logo {
+            height: 45px;
+            width: auto;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
         }
         
         .nav-links {
@@ -194,6 +192,25 @@
             margin-bottom: 2rem;
         }
         
+        .brand-presentation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+        
+        .brand-presentation .logo {
+            height: 35px;
+        }
+        
+        .brand-presentation span {
+            font-weight: 500;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+        }
+        
         /* Products Section */
         .products {
             background-color: var(--light-color);
@@ -224,7 +241,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--gray-color);
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .product-content {
@@ -266,74 +289,16 @@
             color: var(--primary-color);
         }
         
-        /* Newsletter Section */
-        .newsletter {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
+        /* Brand Section */
+        .brand-section {
             text-align: center;
-        }
-        
-        .newsletter h2 {
-            color: white;
-        }
-        
-        .newsletter p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        
-        .newsletter-form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-        
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .form-control {
-            padding: 0.75rem 1rem;
-            border: none;
-            border-radius: var(--border-radius);
-            font-family: inherit;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            background-color: var(--light-color);
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .testimonial-card {
+            padding: 3rem 0;
             background-color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
         }
         
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-color);
+        .brand-section .logo {
+            height: 70px;
+            margin: 0 auto 1.5rem;
         }
         
         /* Footer */
@@ -354,6 +319,11 @@
             color: white;
             margin-bottom: 1.5rem;
             font-size: 1.25rem;
+        }
+        
+        .footer-logo {
+            height: 45px;
+            margin-bottom: 1rem;
         }
         
         .footer-links {
@@ -451,18 +421,9 @@
                 padding: 4rem 0;
             }
             
-            .newsletter-form {
+            .brand-presentation {
                 flex-direction: column;
-            }
-        }
-        
-        @media (min-width: 769px) {
-            .newsletter-form {
-                flex-direction: row;
-            }
-            
-            .form-group {
-                flex: 1;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -472,12 +433,14 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Affiliate<span>Site</span></a>
+                <div class="logo-container">
+                    <a href="#" class="logo">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
+                    </a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#benefits">Why Choose Us</a></li>
                 </ul>
                 <button class="mobile-menu-btn">☰</button>
             </nav>
@@ -488,9 +451,15 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Discover Products That Transform Your Daily Life</h1>
-                <p>Handpicked solutions to simplify your routine and elevate your lifestyle.</p>
-                <a href="[CTA_LINK]" class="btn">Explore Our Top Picks</a>
+                <h1>Discover Premium Men's Flannel Collection</h1>
+                <p>Handpicked flannel shirts and hoodies that blend comfort, style, and durability for your everyday wardrobe.</p>
+                <a href="#products" class="btn">View Collection</a>
+                
+                <!-- Brand Presentation -->
+                <div class="brand-presentation">
+                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
+                    <span>Daily Find Collectives</span>
+                </div>
             </div>
         </div>
     </section>
@@ -498,128 +467,89 @@
     <!-- Products Section -->
     <section id="products" class="section products">
         <div class="container">
-            <h2 class="section-title">Featured Products</h2>
+            <h2 class="section-title">Our Flannel Collection</h2>
             <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- REPLACE: [PRODUCT_IMAGE] and [PRODUCT_IMAGE_ALT] -->
-                        <img src="[PRODUCT_IMAGE]" alt="[PRODUCT_IMAGE_ALT]">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie1_front.jpg" alt="Little Beauty men's flannel hoodie shirt in plaid pattern">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">[PRODUCT_TITLE]</h3>
-                        <p class="product-description">[PRODUCT_DESCRIPTION]</p>
-                        <a href="[PRODUCT_LINK]" class="btn">Learn More</a>
+                        <h3 class="product-title">Little Beauty Men's Flannel Hoodie Shirt</h3>
+                        <p class="product-description">Comfortable long sleeve plaid shirt with hood - perfect blend of style and comfort</p>
+                        <a href="https://amzn.to/49sZp4i" class="btn">Check Price on Amazon</a>
                     </div>
                 </div>
                 
                 <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- REPLACE: [PRODUCT_IMAGE] and [PRODUCT_IMAGE_ALT] -->
-                        <img src="[PRODUCT_IMAGE]" alt="[PRODUCT_IMAGE_ALT]">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie2_front.jpg" alt="JACKETOWN men's flannel hoodie shirt with chest pocket">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">[PRODUCT_TITLE]</h3>
-                        <p class="product-description">[PRODUCT_DESCRIPTION]</p>
-                        <a href="[PRODUCT_LINK]" class="btn">Learn More</a>
+                        <h3 class="product-title">JACKETOWN Men's Flannel Hoodie Shirt</h3>
+                        <p class="product-description">Stylish button-down plaid shirt jacket with pocket - versatile casual wear</p>
+                        <a href="https://amzn.to/43BTRRg" class="btn">Check Price on Amazon</a>
                     </div>
                 </div>
                 
                 <!-- Product 3 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- REPLACE: [PRODUCT_IMAGE] and [PRODUCT_IMAGE_ALT] -->
-                        <img src="[PRODUCT_IMAGE]" alt="[PRODUCT_IMAGE_ALT]">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt1_front.jpg" alt="Legendary Whitetails 100% cotton flannel shirt">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">[PRODUCT_TITLE]</h3>
-                        <p class="product-description">[PRODUCT_DESCRIPTION]</p>
-                        <a href="[PRODUCT_LINK]" class="btn">Learn More</a>
+                        <h3 class="product-title">Legendary Whitetails Men's Flannel Shirt</h3>
+                        <p class="product-description">Premium 100% cotton button-down flannel with corduroy accents</p>
+                        <a href="https://amzn.to/48zqyBC" class="btn">Check Price on Amazon</a>
                     </div>
                 </div>
                 
                 <!-- Product 4 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <!-- REPLACE: [PRODUCT_IMAGE] and [PRODUCT_IMAGE_ALT] -->
-                        <img src="[PRODUCT_IMAGE]" alt="[PRODUCT_IMAGE_ALT]">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt2_1.jpg" alt="Amazon Essentials two-pocket flannel shirt">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">[PRODUCT_TITLE]</h3>
-                        <p class="product-description">[PRODUCT_DESCRIPTION]</p>
-                        <a href="[PRODUCT_LINK]" class="btn">Learn More</a>
+                        <h3 class="product-title">Amazon Essentials Men's Flannel Shirt</h3>
+                        <p class="product-description">Regular-fit two-pocket flannel shirt in limited discontinued colors</p>
+                        <a href="https://amzn.to/4ojt5EO" class="btn">Check Price on Amazon</a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section class="brand-section">
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
+            <h2>Daily Find Collectives</h2>
+            <p>We're starting our journey to bring you carefully selected products that combine quality and value.</p>
         </div>
     </section>
 
     <!-- Benefits Section -->
     <section id="benefits" class="section">
         <div class="container">
-            <h2 class="section-title">Why Choose Our Recommendations</h2>
+            <h2 class="section-title">Why Shop With Us</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3>Thoroughly Researched</h3>
-                    <p>Every product we recommend has been extensively tested and researched to ensure quality and effectiveness.</p>
+                    <h3>Quality Selection</h3>
+                    <p>We focus on products that offer good quality materials and construction for lasting wear.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">★</div>
-                    <h3>Top Quality Only</h3>
-                    <p>We only feature products that meet our high standards for quality, durability, and user satisfaction.</p>
+                    <h3>Style Focused</h3>
+                    <p>Our collection features versatile designs suitable for various occasions and personal styles.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">♻</div>
-                    <h3>Value Focused</h3>
-                    <p>Our recommendations prioritize products that offer the best value for your investment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section id="newsletter" class="section newsletter">
-        <div class="container">
-            <h2 class="section-title">Stay Updated</h2>
-            <p>Subscribe to our newsletter to receive exclusive product recommendations and special offers.</p>
-            
-            <!-- REPLACE: [EMAIL_FORM_ACTION] with your form processing URL -->
-            <form action="[EMAIL_FORM_ACTION]" method="POST" class="newsletter-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <button type="submit" class="btn btn-accent">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Readers Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">[TESTIMONIAL_TEXT]</p>
-                    <p class="testimonial-author">- [TESTIMONIAL_AUTHOR]</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">[TESTIMONIAL_TEXT]</p>
-                    <p class="testimonial-author">- [TESTIMONIAL_AUTHOR]</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">[TESTIMONIAL_TEXT]</p>
-                    <p class="testimonial-author">- [TESTIMONIAL_AUTHOR]</p>
+                    <h3>Direct Links</h3>
+                    <p>Easy access to product pages so you can make informed purchasing decisions quickly.</p>
                 </div>
             </div>
         </div>
@@ -630,14 +560,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>AffiliateSite</h3>
-                    <p>Your trusted source for honest product recommendations and reviews.</p>
+                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="footer-logo">
+                    <p>Discovering quality products for everyday life.</p>
                     <div class="social-links">
-                        <!-- REPLACE: [SOCIAL_LINK] with your actual social media URLs -->
-                        <a href="[SOCIAL_LINK]" class="social-link">FB</a>
-                        <a href="[SOCIAL_LINK]" class="social-link">TW</a>
-                        <a href="[SOCIAL_LINK]" class="social-link">IG</a>
-                        <a href="[SOCIAL_LINK]" class="social-link">PT</a>
+                        <a href="https://www.pinterest.com/dailyfindcollectives/" class="social-link">PT</a>
+                        <a href="http://bunny123-code.github.io/affiliate-landing-page" class="social-link">WS</a>
                     </div>
                 </div>
                 
@@ -645,26 +572,23 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#products">Products</a></li>
-                        <li><a href="#benefits">Benefits</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li><a href="#benefits">Why Choose Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Legal</h3>
+                    <h3>Information</h3>
                     <ul class="footer-links">
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <p>Affiliate Disclosure: This site contains affiliate links. We may earn a commission if you make a purchase through these links, at no additional cost to you.</p>
-                <p>&copy; 2023 AffiliateSite. All rights reserved.</p>
+                <p>&copy; 2023 Daily Find Collectives. All rights reserved.</p>
             </div>
         </div>
     </footer>
