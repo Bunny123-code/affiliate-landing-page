@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover amazing men's flannel shirts and hoodies that will transform your casual wardrobe and improve your style.">
-    <title>Premium Men's Flannel Collection | Style & Comfort</title>
+    <meta name="description" content="DailyFind Collectives - Discovering premium quality products that enhance your everyday life. Starting with curated men's fashion essentials.">
+    
+    <!-- Browser Tab Settings -->
+    <title>DailyFind Collectives | Premium Quality Products Curated for You</title>
+    
+    <!-- Professional Favicon Setup -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,7 +148,13 @@
             transition: var(--transition);
         }
         
-        .logo:hover {
+        .logo-icon {
+            height: 35px;
+            width: auto;
+            transition: var(--transition);
+        }
+        
+        .logo:hover, .logo-icon:hover {
             transform: scale(1.05);
         }
         
@@ -170,25 +184,30 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* Professional Hero Section - Clean Dark Background */
         .hero {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             padding: 6rem 0;
             text-align: center;
+            color: white;
+            position: relative;
         }
         
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
             margin-bottom: 1.5rem;
+            color: white;
         }
         
         .hero p {
             font-size: 1.25rem;
-            color: var(--gray-color);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
         }
         
@@ -201,17 +220,18 @@
             padding: 1rem;
         }
         
-        .brand-presentation .logo {
-            height: 35px;
+        .brand-presentation .logo-icon {
+            height: 30px;
+            filter: brightness(0) invert(1);
         }
         
         .brand-presentation span {
             font-weight: 500;
-            color: var(--dark-color);
+            color: white;
             font-size: 1.1rem;
         }
         
-        /* Products Section */
+        /* Products Section - Amazon Style */
         .products {
             background-color: var(--light-color);
         }
@@ -228,6 +248,8 @@
             overflow: hidden;
             box-shadow: var(--box-shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
         
         .product-card:hover {
@@ -236,19 +258,22 @@
         }
         
         .product-image {
-            height: 200px;
-            background-color: var(--light-gray);
+            height: 250px;
+            background-color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
             position: relative;
+            padding: 1rem;
         }
         
         .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
             transition: var(--transition);
         }
         
@@ -274,16 +299,21 @@
         
         .product-content {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .product-title {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
+            line-height: 1.4;
         }
         
         .product-description {
             color: var(--gray-color);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
         
         /* Benefits Section */
@@ -321,6 +351,11 @@
         .brand-section .logo {
             height: 70px;
             margin: 0 auto 1.5rem;
+        }
+        
+        .brand-vision {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         /* Footer */
@@ -447,6 +482,27 @@
                 flex-direction: column;
                 gap: 0.5rem;
             }
+            
+            .product-image {
+                height: 220px;
+            }
+            
+            /* Use icon logo on mobile for header */
+            .logo-container .logo {
+                display: none;
+            }
+            
+            .logo-container .logo-icon {
+                display: block;
+                height: 35px;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            /* Hide icon logo on desktop */
+            .logo-container .logo-icon {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -459,28 +515,31 @@
                     <a href="#" class="logo">
                         <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
                     </a>
+                    <a href="#" class="logo-icon">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png" alt="Daily Find Collectives" class="logo-icon">
+                    </a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#benefits">Why Choose Us</a></li>
+                    <li><a href="#products">Current Collection</a></li>
+                    <li><a href="#benefits">Our Promise</a></li>
                 </ul>
                 <button class="mobile-menu-btn">☰</button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Professional Hero Section - Clean Dark Background -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Discover Premium Men's Flannel Collection</h1>
-                <p>Handpicked flannel shirts and hoodies that blend comfort, style, and durability for your everyday wardrobe.</p>
-                <a href="#products" class="btn">View Collection</a>
+                <h1>Discover Premium Quality Products</h1>
+                <p>We find and test exceptional products so you don't have to. Starting with curated men's essentials that deliver outstanding value and performance.</p>
+                <a href="#products" class="btn">Explore Current Selection</a>
                 
-                <!-- Brand Presentation -->
+                <!-- Brand Presentation with Icon -->
                 <div class="brand-presentation">
-                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
-                    <span>Daily Find Collectives</span>
+                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png" alt="Daily Find Collectives" class="logo-icon">
+                    <span>Your Trusted Guide to Quality Products</span>
                 </div>
             </div>
         </div>
@@ -489,7 +548,9 @@
     <!-- Products Section -->
     <section id="products" class="section products">
         <div class="container">
-            <h2 class="section-title">Our Flannel Collection</h2>
+            <h2 class="section-title">Our Current Selection</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--gray-color);">We're starting with premium men's flannel essentials, with more quality categories coming soon.</p>
+            
             <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
@@ -546,32 +607,35 @@
     <section class="brand-section">
         <div class="container">
             <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
-            <h2>Daily Find Collectives</h2>
-            <p>We're starting our journey to bring you carefully selected products that combine quality and value.</p>
+            <div class="brand-vision">
+                <h2>Our Mission: Finding Quality, So You Don't Have To</h2>
+                <p>At DailyFind Collectives, we're building a trusted destination for premium products across categories. We test, research, and verify so you can shop with confidence.</p>
+                <p><strong>Starting with fashion essentials, expanding to lifestyle products that truly deliver on their promises.</strong></p>
+            </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
     <section id="benefits" class="section">
         <div class="container">
-            <h2 class="section-title">Why Shop With Us</h2>
+            <h2 class="section-title">Our Quality Promise</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3>Quality Selection</h3>
-                    <p>We focus on products that offer good quality materials and construction for lasting wear.</p>
+                    <h3>Thoroughly Vetted</h3>
+                    <p>Every product undergoes rigorous evaluation for quality, durability, and real-world performance.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">★</div>
-                    <h3>Style Focused</h3>
-                    <p>Our collection features versatile designs suitable for various occasions and personal styles.</p>
+                    <h3>Premium Standards</h3>
+                    <p>We only feature products that meet our high benchmarks for materials, craftsmanship, and value.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">♻</div>
-                    <h3>Direct Links</h3>
-                    <p>Easy access to product pages so you can make informed purchasing decisions quickly.</p>
+                    <h3>Honest Curation</h3>
+                    <p>No paid placements. Our recommendations are based on genuine quality assessment and user benefits.</p>
                 </div>
             </div>
         </div>
@@ -582,8 +646,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="footer-logo">
-                    <p>Discovering quality products for everyday life.</p>
+                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png" alt="Daily Find Collectives" class="footer-logo">
+                    <p>Your trusted guide to premium quality products across categories.</p>
                     <div class="social-links">
                         <a href="https://www.pinterest.com/dailyfindcollectives/" class="social-link">PT</a>
                         <a href="http://bunny123-code.github.io/affiliate-landing-page" class="social-link">WS</a>
@@ -593,8 +657,8 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#benefits">Why Choose Us</a></li>
+                        <li><a href="#products">Current Collection</a></li>
+                        <li><a href="#benefits">Our Promise</a></li>
                     </ul>
                 </div>
                 
@@ -610,7 +674,7 @@
             
             <div class="footer-bottom">
                 <p>Affiliate Disclosure: This site contains affiliate links. We may earn a commission if you make a purchase through these links, at no additional cost to you.</p>
-                <p>&copy; 2023 Daily Find Collectives. All rights reserved.</p>
+                <p>&copy; 2023 DailyFind Collectives. All rights reserved.</p>
             </div>
         </div>
     </footer>
