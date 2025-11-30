@@ -242,12 +242,34 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            position: relative;
         }
         
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .product-image::before {
+            content: "Loading...";
+            position: absolute;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .product-image.loading::before {
+            display: block;
+        }
+        
+        .product-image.loading img {
+            display: none;
         }
         
         .product-content {
@@ -471,8 +493,8 @@
             <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie1_front.jpg" alt="Little Beauty men's flannel hoodie shirt in plaid pattern">
+                    <div class="product-image" id="product-image-1">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie1_front.jpg" alt="Little Beauty men's flannel hoodie shirt in plaid pattern" onload="imageLoaded(1)" onerror="imageError(1)">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Little Beauty Men's Flannel Hoodie Shirt</h3>
@@ -483,8 +505,8 @@
                 
                 <!-- Product 2 -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie2_front.jpg" alt="JACKETOWN men's flannel hoodie shirt with chest pocket">
+                    <div class="product-image" id="product-image-2">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie2_front.jpg" alt="JACKETOWN men's flannel hoodie shirt with chest pocket" onload="imageLoaded(2)" onerror="imageError(2)">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">JACKETOWN Men's Flannel Hoodie Shirt</h3>
@@ -495,8 +517,8 @@
                 
                 <!-- Product 3 -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt1_front.jpg" alt="Legendary Whitetails 100% cotton flannel shirt">
+                    <div class="product-image" id="product-image-3">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt1_front.jpg" alt="Legendary Whitetails 100% cotton flannel shirt" onload="imageLoaded(3)" onerror="imageError(3)">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Legendary Whitetails Men's Flannel Shirt</h3>
@@ -507,8 +529,8 @@
                 
                 <!-- Product 4 -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt2_1.jpg" alt="Amazon Essentials two-pocket flannel shirt">
+                    <div class="product-image" id="product-image-4">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt2_1.jpg" alt="Amazon Essentials two-pocket flannel shirt" onload="imageLoaded(4)" onerror="imageError(4)">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Amazon Essentials Men's Flannel Shirt</h3>
@@ -604,6 +626,36 @@
             link.addEventListener('click', function() {
                 document.querySelector('.nav-links').classList.remove('active');
             });
+        });
+
+        // Image loading functions
+        function imageLoaded(productId) {
+            const imageContainer = document.getElementById(`product-image-${productId}`);
+            imageContainer.classList.remove('loading');
+        }
+
+        function imageError(productId) {
+            const imageContainer = document.getElementById(`product-image-${productId}`);
+            imageContainer.classList.add('loading');
+            console.error(`Failed to load image for product ${productId}`);
+        }
+
+        // Set all images to loading state initially
+        document.addEventListener('DOMContentLoaded', function() {
+            for (let i = 1; i <= 4; i++) {
+                const imageContainer = document.getElementById(`product-image-${i}`);
+                const img = imageContainer.querySelector('img');
+                
+                // Check if image is already loaded
+                if (img.complete) {
+                    if (img.naturalHeight === 0) {
+                        imageContainer.classList.add('loading');
+                    }
+                } else {
+                    // Image is still loading
+                    imageContainer.classList.add('loading');
+                }
+            }
         });
     </script>
 </body>
