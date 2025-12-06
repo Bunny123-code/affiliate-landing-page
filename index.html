@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DailyFind Collectives - Discovering premium quality products that enhance your everyday life. Starting with curated men's fashion essentials.">
+    <meta name="description" content="Minimalist EcoFinds - Curating sustainable home decor essentials for intentional living spaces. Discover eco-friendly, stylish products for your conscious home.">
     
     <!-- Pinterest Verification -->
     <meta name="p:domain_verify" content="351617963b0fb99deccd782f88b33b20"/>
     
     <!-- Browser Tab Settings -->
-    <title>DailyFind Collectives | Premium Quality Products Curated for You</title>
+    <title>Minimalist EcoFinds | Curated Calm for Your Conscious Space</title>
     
     <!-- Professional Favicon Setup -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         /* CSS Reset and Base Styles */
@@ -31,15 +31,22 @@
         }
         
         :root {
-            --primary-color: #3a86ff;
-            --secondary-color: #8338ec;
-            --accent-color: #ff006e;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
+            /* Eco-Friendly Color Palette */
+            --sage-green: #9CAF8E;
+            --warm-beige: #F5E9D9;
+            --off-white: #F8F8F8;
+            --soft-grey: #E5E5E5;
+            --charcoal: #3A3A3A;
+            --earth-brown: #8B7355;
+            
+            --primary-color: var(--sage-green);
+            --secondary-color: var(--charcoal);
+            --accent-color: var(--earth-brown);
+            --light-color: var(--off-white);
+            --dark-color: var(--charcoal);
             --gray-color: #6c757d;
-            --light-gray: #e9ecef;
             --border-radius: 8px;
-            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
         }
         
@@ -57,11 +64,15 @@
         }
         
         h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
+            font-weight: 500;
         }
         
         h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 2rem;
+            font-weight: 500;
         }
         
         h3 {
@@ -79,7 +90,7 @@
         }
         
         a:hover {
-            color: var(--secondary-color);
+            color: var(--accent-color);
         }
         
         img {
@@ -98,7 +109,7 @@
         .btn {
             display: inline-block;
             padding: 0.75rem 1.5rem;
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             color: white;
             border: none;
             border-radius: var(--border-radius);
@@ -109,7 +120,7 @@
         }
         
         .btn:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--accent-color);
             color: white;
             transform: translateY(-2px);
             box-shadow: var(--box-shadow);
@@ -127,7 +138,7 @@
         /* Header */
         header {
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -151,13 +162,7 @@
             transition: var(--transition);
         }
         
-        .logo-icon {
-            height: 35px;
-            width: auto;
-            transition: var(--transition);
-        }
-        
-        .logo:hover, .logo-icon:hover {
+        .logo:hover {
             transform: scale(1.05);
         }
         
@@ -187,10 +192,33 @@
             cursor: pointer;
         }
         
-        /* Professional Hero Section - Clean Dark Background */
+        /* Amazon Disclosure Banner */
+        .disclosure-banner {
+            background-color: var(--light-color);
+            border-bottom: 1px solid var(--soft-grey);
+            padding: 0.5rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--gray-color);
+            font-weight: 500;
+        }
+        
+        .disclosure-banner p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .disclosure-banner strong {
+            color: var(--accent-color);
+        }
+        
+        /* Professional Hero Section with Banner */
         .hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            padding: 6rem 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Banner.png');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0;
             text-align: center;
             color: white;
             position: relative;
@@ -206,12 +234,14 @@
         .hero h1 {
             margin-bottom: 1.5rem;
             color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         
         .hero p {
             font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
             margin-bottom: 2rem;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
         }
         
         .brand-presentation {
@@ -223,7 +253,7 @@
             padding: 1rem;
         }
         
-        .brand-presentation .logo-icon {
+        .brand-presentation .logo {
             height: 30px;
             filter: brightness(0) invert(1);
         }
@@ -232,91 +262,142 @@
             font-weight: 500;
             color: white;
             font-size: 1.1rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
         
-        /* Products Section - Amazon Style */
-        .products {
+        /* Product Carousel Section */
+        /* CHANGES MADE HERE: Updated .carousel-image rule */
+        .product-carousel {
             background-color: var(--light-color);
+            padding: 4rem 0;
         }
         
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .product-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .product-image {
-            height: 250px;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+        .carousel-container {
+            max-width: 1000px;
+            margin: 0 auto;
             position: relative;
-            padding: 1rem;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            background-color: white;
         }
         
-        .product-image img {
-            width: auto;
-            height: auto;
-            max-width: 100%;
-            max-height: 100%;
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 500px;
+            /* CHANGED from 'cover' to 'contain' and added background */
             object-fit: contain;
-            transition: var(--transition);
-        }
-        
-        .product-image:hover img {
-            transform: scale(1.05);
-        }
-        
-        .product-image::before {
-            content: "Loading...";
-            position: absolute;
-            color: var(--gray-color);
-            font-size: 0.9rem;
-            display: none;
-        }
-        
-        .product-image.loading::before {
+            background-color: #f8f8f8;
             display: block;
         }
         
-        .product-image.loading img {
-            display: none;
+        .carousel-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem;
+            text-align: center;
         }
         
-        .product-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .product-title {
-            font-size: 1.25rem;
+        .carousel-content h3 {
             margin-bottom: 0.5rem;
-            line-height: 1.4;
+            color: white;
         }
         
-        .product-description {
-            color: var(--gray-color);
+        .carousel-content p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 1rem;
+            z-index: 10;
+        }
+        
+        .carousel-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--soft-grey);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .carousel-dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        .carousel-product-info {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .carousel-product-info h2 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Sustainability Badge */
+        .sustainability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             margin-bottom: 1.5rem;
-            flex-grow: 1;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+        }
+        
+        .sustainability-badge::before {
+            content: "🌿";
         }
         
         /* Benefits Section */
@@ -329,6 +410,14 @@
         .benefit-card {
             text-align: center;
             padding: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
         }
         
         .benefit-icon {
@@ -344,21 +433,51 @@
             color: var(--primary-color);
         }
         
-        /* Brand Section */
-        .brand-section {
+        /* Brand Story Section */
+        .brand-story {
+            background-color: var(--warm-beige);
             text-align: center;
-            padding: 3rem 0;
-            background-color: white;
         }
         
-        .brand-section .logo {
-            height: 70px;
+        .brand-story .logo {
+            height: 80px;
             margin: 0 auto 1.5rem;
         }
         
         .brand-vision {
             max-width: 800px;
             margin: 0 auto;
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .value-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        /* Curated CTA */
+        .curated-cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .curated-cta h2 {
+            color: white;
+            margin-bottom: 1rem;
         }
         
         /* Footer */
@@ -434,6 +553,7 @@
         }
         
         /* Responsive Styles */
+        /* SECOND CHANGE MADE HERE: Updated mobile .carousel-image rule */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -478,7 +598,7 @@
             }
             
             .hero {
-                padding: 4rem 0;
+                padding: 5rem 0;
             }
             
             .brand-presentation {
@@ -486,26 +606,39 @@
                 gap: 0.5rem;
             }
             
-            .product-image {
-                height: 220px;
+            .carousel-image {
+                height: 350px;
+                /* CHANGED from 'cover' to 'contain' and added background */
+                object-fit: contain;
+                background-color: #f8f8f8;
             }
             
-            /* Use icon logo on mobile for header */
-            .logo-container .logo {
-                display: none;
+            .carousel-content {
+                padding: 1rem;
             }
             
-            .logo-container .logo-icon {
-                display: block;
+            .carousel-content h3 {
+                font-size: 1.25rem;
+            }
+            
+            .carousel-content p {
+                font-size: 0.9rem;
+            }
+            
+            .carousel-btn {
+                width: 35px;
                 height: 35px;
+                font-size: 1.25rem;
+            }
+            
+            .disclosure-banner {
+                font-size: 0.75rem;
+                padding: 0.4rem 1rem;
             }
         }
         
         @media (min-width: 769px) {
-            /* Hide icon logo on desktop */
-            .logo-container .logo-icon {
-                display: none;
-            }
+            /* Desktop-specific styles */
         }
     </style>
 </head>
@@ -516,131 +649,192 @@
             <nav class="navbar">
                 <div class="logo-container">
                     <a href="#" class="logo">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
-                    </a>
-                    <a href="#" class="logo-icon">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png" alt="Daily Find Collectives" class="logo-icon">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png" alt="Minimalist EcoFinds" class="logo">
                     </a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#products">Current Collection</a></li>
-                    <li><a href="#benefits">Our Promise</a></li>
+                    <li><a href="#curated">Curated Finds</a></li>
+                    <li><a href="#values">Our Values</a></li>
+                    <li><a href="#story">Our Story</a></li>
                 </ul>
                 <button class="mobile-menu-btn">☰</button>
             </nav>
         </div>
+        
+        <!-- Amazon Disclosure Banner -->
+        <div class="disclosure-banner">
+            <div class="container">
+                <p><strong>As an Amazon Associate I earn from qualifying purchases.</strong></p>
+            </div>
+        </div>
     </header>
 
-    <!-- Professional Hero Section - Clean Dark Background -->
+    <!-- Professional Hero Section with Banner -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Discover Premium Quality Products</h1>
-                <p>We find and test exceptional products so you don't have to. Starting with curated men's essentials that deliver outstanding value and performance.</p>
-                <a href="#products" class="btn">Explore Current Selection</a>
+                <h1>Curated Calm for Your Conscious Space</h1>
+                <p>Simplifying your search for stylish, functional, and genuinely sustainable home decor. Create intentional living spaces that reflect your values.</p>
+                <a href="#curated" class="btn">Explore Curated Finds</a>
                 
-                <!-- Brand Presentation with Icon -->
+                <!-- Brand Presentation -->
                 <div class="brand-presentation">
-                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png" alt="Daily Find Collectives" class="logo-icon">
-                    <span>Your Trusted Guide to Quality Products</span>
+                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png" alt="Minimalist EcoFinds" class="logo">
+                    <span>Minimalist EcoFinds</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="section products">
+    <!-- Product Carousel Section -->
+    <section id="curated" class="section product-carousel">
         <div class="container">
-            <h2 class="section-title">Our Current Selection</h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: var(--gray-color);">We're starting with premium men's flannel essentials, with more quality categories coming soon.</p>
+            <h2 class="section-title">Curated Sustainable Decor</h2>
             
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-image" id="product-image-1">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie1_front.jpg" alt="Little Beauty men's flannel hoodie shirt in plaid pattern" onload="imageLoaded(1)" onerror="imageError(1)">
+            <!-- Sustainability Badge -->
+            <div class="sustainability-badge">
+                Sustainably Sourced • Ethically Made • Designed to Last
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/WallArt1/WallArt1_1.png" alt="Large 3-piece black white brown abstract canvas art on living room wall behind grey sofa, boho minimalist decor" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3>Large Framed Black & White Abstract Wall Art in a Living Room</h3>
+                            <p>See how this 3-piece boho abstract canvas art transforms a living room. The neutral black, white, and brown design creates a modern focal point behind a contemporary sofa.</p>
+                        </div>
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Little Beauty Men's Flannel Hoodie Shirt</h3>
-                        <p class="product-description">Comfortable long sleeve plaid shirt with hood - perfect blend of style and comfort</p>
-                        <a href="https://amzn.to/49sZp4i" class="btn">Check Price on Amazon</a>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/WallArt1/WallArt1_2.png" alt="Framed boho abstract wall art set hanging in home entryway or hallway, showcasing scale and placement" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3>Boho Abstract Wall Art Displayed in a Home Entryway</h3>
+                            <p>This framed canvas set styled in an entryway or hallway. The 72-inch wide arrangement adds minimalist artistic flair to transitional spaces.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/WallArt1/WallArt1_3.png" alt="Close-up detail of the rust-proof frame and canvas texture on the abstract wall art print" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3>Close-Up Detail of Framed Canvas Construction & Quality</h3>
+                            <p>Detailed view of the sturdy, rust-proof frame and canvas texture. Features waterproof, moisture-resistant 2D prints for durability.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/WallArt1/WallArt1_4.png" alt="Size comparison of the three framed canvas panels, each 24x36 inches, showing the total width of 72 inches" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3>Size Visualization of the 3-Piece Framed Canvas Set</h3>
+                            <p>Visual guide showing the dimensions of each panel (24x36 inches) and the total impressive span (72 inches wide) of the complete set.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/WallArt1/WallArt1_5.png" alt="Instructions on using the hanging kit for the large framed abstract canvas art set" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3>How to Hang the Framed Canvas Set with Included Hardware</h3>
+                            <p>Step-by-step demonstration using the included hanging kit for easy, level installation. This 'ready to hang' set simplifies the decorating process.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image" id="product-image-2">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/Hoodie2_front.jpg" alt="JACKETOWN men's flannel hoodie shirt with chest pocket" onload="imageLoaded(2)" onerror="imageError(2)">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">JACKETOWN Men's Flannel Hoodie Shirt</h3>
-                        <p class="product-description">Stylish button-down plaid shirt jacket with pocket - versatile casual wear</p>
-                        <a href="https://amzn.to/43BTRRg" class="btn">Check Price on Amazon</a>
-                    </div>
+                <!-- Navigation Buttons -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" id="prev-btn">‹</button>
+                    <button class="carousel-btn next" id="next-btn">›</button>
                 </div>
                 
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-image" id="product-image-3">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt1_front.jpg" alt="Legendary Whitetails 100% cotton flannel shirt" onload="imageLoaded(3)" onerror="imageError(3)">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Legendary Whitetails Men's Flannel Shirt</h3>
-                        <p class="product-description">Premium 100% cotton button-down flannel with corduroy accents</p>
-                        <a href="https://amzn.to/48zqyBC" class="btn">Check Price on Amazon</a>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image" id="product-image-4">
-                        <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/shirt2_1.jpg" alt="Amazon Essentials two-pocket flannel shirt" onload="imageLoaded(4)" onerror="imageError(4)">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Amazon Essentials Men's Flannel Shirt</h3>
-                        <p class="product-description">Regular-fit two-pocket flannel shirt in limited discontinued colors</p>
-                        <a href="https://amzn.to/4ojt5EO" class="btn">Check Price on Amazon</a>
-                    </div>
+                <!-- Dots Navigation -->
+                <div class="carousel-dots" id="carousel-dots">
+                    <!-- Dots will be generated by JavaScript -->
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Brand Section -->
-    <section class="brand-section">
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Logo1.png" alt="Daily Find Collectives" class="logo">
-            <div class="brand-vision">
-                <h2>Our Mission: Finding Quality, So You Don't Have To</h2>
-                <p>At DailyFind Collectives, we're building a trusted destination for premium products across categories. We test, research, and verify so you can shop with confidence.</p>
-                <p><strong>Starting with fashion essentials, expanding to lifestyle products that truly deliver on their promises.</strong></p>
+            
+            <!-- Product Info -->
+            <div class="carousel-product-info">
+                <h2>Large Framed Black & White Abstract Wall Art Set - 3 Piece</h2>
+                <p style="margin-bottom: 1.5rem; color: var(--gray-color);">Transform your space with this sustainably crafted abstract art collection. Each piece is designed for lasting beauty and minimal environmental impact.</p>
+                <a href="https://amzn.to/3MhLEMp" class="btn">Check Price on Amazon</a>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section id="benefits" class="section">
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Our Quality Promise</h2>
+            <h2 class="section-title">Why Choose Mindfully Curated Decor</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3>Thoroughly Vetted</h3>
-                    <p>Every product undergoes rigorous evaluation for quality, durability, and real-world performance.</p>
+                    <h3>Time-Saving Curation</h3>
+                    <p>We filter through thousands of options to find genuinely sustainable products that meet our strict criteria for design, function, and ethics.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">★</div>
-                    <h3>Premium Standards</h3>
-                    <p>We only feature products that meet our high benchmarks for materials, craftsmanship, and value.</p>
+                    <h3>Transparent Sustainability</h3>
+                    <p>No greenwashing. We provide clear information about materials, production processes, and environmental impact for every product.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">♻</div>
-                    <h3>Honest Curation</h3>
-                    <p>No paid placements. Our recommendations are based on genuine quality assessment and user benefits.</p>
+                    <h3>Functional Beauty</h3>
+                    <p>We believe the most sustainable item is one you'll love and use for years. Every product combines aesthetic appeal with practical utility.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section id="story" class="section brand-story">
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png" alt="Minimalist EcoFinds" class="logo">
+            <div class="brand-vision">
+                <h2>Our Mission: Simplifying Sustainable Living</h2>
+                <p>Minimalist EcoFinds was born from a simple idea: finding beautiful, sustainable home decor shouldn't be overwhelming. We bridge the gap between eco-conscious values and intentional design, curating only the most thoughtfully made pieces for your space.</p>
+                <p><strong>We solve the overwhelm by vetting every product for sustainable materials, ethical production, and timeless design.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Intentional Curation</h3>
+                    <p>We prioritize quality over quantity and purpose over trend, selecting only products that serve a meaningful role in your space.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🔍</div>
+                    <h3>Transparent Sustainability</h3>
+                    <p>We provide honest information about materials, production methods, and environmental impact, cutting through greenwashing.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h3>Functional Beauty</h3>
+                    <p>We believe the most sustainable items are those you'll cherish and use daily, blending aesthetic pleasure with practical purpose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated CTA -->
+    <section class="curated-cta">
+        <div class="container">
+            <h2>Ready to Create Your Conscious Space?</h2>
+            <p style="margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9);">Join our community of intentional decorators and discover products that align with your values.</p>
+            <a href="#curated" class="btn" style="background-color: white; color: var(--dark-color);">Explore More Curated Finds</a>
         </div>
     </section>
 
@@ -649,19 +843,19 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/DailyFind_Icon.png" alt="Daily Find Collectives" class="footer-logo">
-                    <p>Your trusted guide to premium quality products across categories.</p>
+                    <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png" alt="Minimalist EcoFinds" class="footer-logo">
+                    <p>Curating sustainable home decor essentials for intentional living spaces.</p>
                     <div class="social-links">
-                        <a href="https://www.pinterest.com/dailyfindcollectives/" class="social-link">PT</a>
-                        <a href="http://bunny123-code.github.io/affiliate-landing-page" class="social-link">WS</a>
+                        <a href="https://www.pinterest.com/minimalist_ecofinds/" class="social-link">PT</a>
                     </div>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#products">Current Collection</a></li>
-                        <li><a href="#benefits">Our Promise</a></li>
+                        <li><a href="#curated">Curated Finds</a></li>
+                        <li><a href="#values">Our Values</a></li>
+                        <li><a href="#story">Our Story</a></li>
                     </ul>
                 </div>
                 
@@ -676,8 +870,8 @@
             </div>
             
             <div class="footer-bottom">
-                <p>Affiliate Disclosure: This site contains affiliate links. We may earn a commission if you make a purchase through these links, at no additional cost to you.</p>
-                <p>&copy; 2023 DailyFind Collectives. All rights reserved.</p>
+                <p>Minimalist EcoFinds is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+                <p>&copy; 2023 Minimalist EcoFinds. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -695,32 +889,95 @@
             });
         });
 
-        // Image loading functions
-        function imageLoaded(productId) {
-            const imageContainer = document.getElementById(`product-image-${productId}`);
-            imageContainer.classList.remove('loading');
+        // Carousel functionality
+        const track = document.getElementById('carousel-track');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const dotsContainer = document.getElementById('carousel-dots');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('data-slide', i);
+            dotsContainer.appendChild(dot);
         }
-
-        function imageError(productId) {
-            const imageContainer = document.getElementById(`product-image-${productId}`);
-            imageContainer.classList.add('loading');
-            console.error(`Failed to load image for product ${productId}`);
+        
+        const dots = document.querySelectorAll('.carousel-dot');
+        
+        // Update carousel position
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update active dot
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
         }
-
-        // Set all images to loading state initially
-        document.addEventListener('DOMContentLoaded', function() {
-            for (let i = 1; i <= 4; i++) {
-                const imageContainer = document.getElementById(`product-image-${i}`);
-                const img = imageContainer.querySelector('img');
-                
-                // Check if image is already loaded
-                if (img.complete) {
-                    if (img.naturalHeight === 0) {
-                        imageContainer.classList.add('loading');
-                    }
+        
+        // Next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Dot navigation
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                currentSlide = parseInt(this.getAttribute('data-slide'));
+                updateCarousel();
+            });
+        });
+        
+        // Auto-advance carousel (every 5 seconds)
+        let carouselInterval = setInterval(nextSlide, 5000);
+        
+        // Pause auto-advance on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(carouselInterval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(nextSlide, 5000);
+        });
+        
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+        
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        track.addEventListener('touchmove', (e) => {
+            endX = e.touches[0].clientX;
+        });
+        
+        track.addEventListener('touchend', () => {
+            const threshold = 50;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextSlide(); // Swipe left
                 } else {
-                    // Image is still loading
-                    imageContainer.classList.add('loading');
+                    prevSlide(); // Swipe right
                 }
             }
         });
