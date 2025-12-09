@@ -1,234 +1,339 @@
-  <div class="meta">
-    <small class="muted">Curated for focus & comfort</small>
-  </div>
-</header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minimalist EcoFinds — Sustainable home & desk picks</title>
 
-<!-- Quick Jump navigation -->
-<nav class="quick-jump" aria-label="Quick jump to section">
-  <a href="#desk-organization">Desk Organization</a>
-  <a href="#ergonomics-comfort">Ergonomics & Comfort</a>
-  <a href="#decor-wellness">Decor & Wellness</a>
-</nav>
+  <!-- Favicon (uses provided logo) -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png">
 
-<!-- Featured Collections / Existing Carousels -->
-<section class="featured" aria-labelledby="featured-heading">
-  <h2 id="featured-heading">Featured Collections</h2>
+  <meta name="description" content="Minimalist EcoFinds — curated sustainable home office decor and eco-friendly desk essentials. I may earn a commission from qualifying purchases.">
 
-  <div class="carousel-wrap" aria-hidden="false">
-    <!--
-      INSERT YOUR FIRST EXISTING CAROUSEL HERE.
-      Example: paste your carousel markup (one of the two carousels) in this div.
-      Keep any required JS for that carousel; ensure its CSS doesn't conflict.
-    -->
-    <!-- BEGIN CAROUSEL #1 - PASTE HERE -->
-    <!-- [PASTE CAROUSEL #1 MARKUP] -->
-    <!-- END CAROUSEL #1 -->
-  </div>
+  <style>
+  :root{
+    --bg:#ffffff;
+    --muted:#6b6b6b;
+    --accent:#2f6b3b; /* subtle green */
+    --card:#fbfbfb;
+    --max-width:1100px;
+    --radius:10px;
+    --gap:18px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#111;
+  }
 
-  <div style="height:0.6rem"></div>
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text,#111);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
 
-  <div class="carousel-wrap" aria-hidden="false">
-    <!--
-      INSERT YOUR SECOND EXISTING CAROUSEL HERE.
-      Paste the second carousel's markup below.
-    -->
-    <!-- BEGIN CAROUSEL #2 - PASTE HERE -->
-    <!-- [PASTE CAROUSEL #2 MARKUP] -->
-    <!-- END CAROUSEL #2 -->
-  </div>
-</section>
+  .container{max-width:var(--max-width);margin:28px auto;padding:0 18px}
 
-<main>
+  .site-header{
+    border-bottom:1px solid #eee;
+    padding:18px 0;
+    background:#fff;
+  }
+  .header-inner{
+    max-width:var(--max-width);
+    margin:0 auto;
+    display:flex;
+    gap:18px;
+    align-items:center;
+    padding:0 18px;
+  }
+  .logo{width:64px;height:64px;object-fit:contain}
+  /* Slightly larger banner but responsive */
+  .banner{max-width:560px;width:100%;height:auto;display:block}
+  .header-text{display:flex;flex-direction:column;gap:6px}
+  .tagline{margin:0;color:var(--muted);font-weight:600}
 
-  <!-- Section 1: Desk Organization & Focus -->
-  <section id="desk-organization" class="board-section" aria-labelledby="desk-org-h">
-    <div class="section-header">
-      <div>
-        <h3 id="desk-org-h">Desk Organization & Focus</h3>
-        <p class="section-sub">Minimal setups to reduce distractions and increase productivity.</p>
+  /* disclosure */
+  .disclosure{
+    margin:10px 18px 0;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  /* Collection header placed above the main lead */
+  .collection-header{
+    margin:22px 0 6px;
+    text-align:center;
+    font-size:18px;
+    color:var(--accent);
+    font-weight:700;
+  }
+
+  /* Lead */
+  .lead{padding:6px 0 22px}
+  .lead h1{margin:6px 0 6px;font-size:24px;text-align:center}
+  .lead p{margin:0;color:var(--muted);text-align:center;max-width:900px;margin-left:auto;margin-right:auto}
+
+  /* Section */
+  .section{margin:22px 0;padding:18px;border-radius:var(--radius)}
+  .section-header h2{margin:0 0 6px;font-size:20px}
+  .section-header p{margin:0 0 12px;color:var(--muted)}
+
+  /* Carousel layout */
+  .carousel-wrap{display:flex;align-items:center;gap:12px}
+  .carousel{display:flex;gap:var(--gap);overflow-x:auto;padding:8px 6px;scroll-behavior:smooth}
+  .carousel::-webkit-scrollbar{height:10px}
+  .carousel::-webkit-scrollbar-thumb{background:#ddd;border-radius:6px}
+  .product-card{
+    min-width:240px;
+    width:260px;
+    background:var(--card);
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(27,32,17,0.04);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .img-wrap{width:100%;height:160px;overflow:hidden;display:block}
+  .img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* Product body */
+  .product-body{padding:12px 14px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .product-title{font-size:16px;margin:0}
+  .product-desc{margin:0;color:var(--muted);font-size:14px}
+  .cta{
+    display:inline-block;
+    margin-top:auto;
+    padding:10px 12px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    text-align:center;
+  }
+
+  /* Carousel buttons */
+  .carousel-btn{
+    background:transparent;
+    border:1px solid #eee;
+    width:40px;height:40px;border-radius:999px;
+    display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted);
+    cursor:pointer;
+  }
+  .carousel-btn:active{transform:scale(.98)}
+
+  /* Footer */
+  .site-footer{margin-top:28px;border-top:1px solid #eee;background:#fff;padding:18px 0}
+  .footer-inner{max-width:var(--max-width);margin:0 auto;padding:0 18px;color:var(--muted);display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center}
+  .footer-inner p{margin:8px 0}
+  .legal{font-size:13px;color:#7a7a7a}
+
+  /* Pinterest icon and link sizing/fitting - fixed */
+  .socials{display:flex;gap:8px;align-items:center}
+  .pinterest-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-weight:600;padding:6px;border-radius:6px}
+  .pinterest-link:hover{background:#f6f7f6}
+  .pinterest-icon{width:20px;height:20px;flex-shrink:0;display:inline-block;vertical-align:middle}
+  .pinterest-icon svg{width:100%;height:100%;display:block}
+  .pinterest-text{font-size:14px;color:var(--accent)}
+
+  /* Ensure SVG uses currentColor */
+  .pinterest-link svg path{fill:currentColor}
+
+  /* Responsiveness */
+  @media (max-width:720px){
+    .header-inner{flex-direction:row;align-items:center}
+    .banner{max-width:320px}
+    .product-card{min-width:200px;width:220px}
+    .footer-inner{text-align:center;align-items:center}
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <img class="logo" src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png" alt="Minimalist EcoFinds logo">
+      <div class="header-text">
+        <img class="banner" src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Banner.png" alt="Minimalist EcoFinds banner — collection for sustainable, minimalist finds">
       </div>
-      <p class="muted">Perfect for Pinterest boards about productivity</p>
     </div>
 
-    <div class="pin-grid">
-      <!-- Product: Motivational Poster -->
-      <article id="product-motivational-poster" class="product-card" aria-labelledby="title-motivational-poster">
-        <div class="product-media">
-          <!-- Main image: replace src with your image in /images -->
-          <img class="main-img" src="images/motivational-poster-main.jpg" alt="Motivational Poster main image">
-          <!-- Thumbnails (click to change the main image) -->
-          <div class="thumb-row" role="list">
-            <!-- Replace src with thumbnail image paths -->
-            <img src="images/motivational-poster-thumb1.jpg" alt="Motivational poster angle" role="listitem" onclick="swapImage('product-motivational-poster', this.src)" class="active">
-            <img src="images/motivational-poster-thumb2.jpg" alt="Motivational poster framed" role="listitem" onclick="swapImage('product-motivational-poster', this.src)">
-            <img src="images/motivational-poster-thumb3.jpg" alt="Motivational poster in workspace" role="listitem" onclick="swapImage('product-motivational-poster', this.src)">
-          </div>
-        </div>
+    <p class="disclosure">I may earn a commission from qualifying purchases.</p>
+  </header>
 
-        <div class="product-body">
-          <div class="product-meta">
-            <h4 id="title-motivational-poster" class="product-title">Motivational Poster — "Focus"</h4>
-            <div class="product-price">$19.99</div>
-          </div>
+  <main class="container">
 
-          <p class="product-desc">Bold typography print that encourages focus and keeps your desk visually organized.</p>
+    <!-- Collection header moved above the lead -->
+    <div class="collection-header">This is our collection for you!</div>
 
-          <ul class="feature-list">
-            <li>High-quality matte paper</li>
-            <li>Boosts motivation & focus</li>
-            <li>Easy to frame or pin to corkboard</li>
-          </ul>
+    <!-- Intro / Lead -->
+    <section class="lead">
+      <h1>Welcome — curated sustainable plants & desk essentials</h1>
+      <p>Thoughtfully chosen items to help you build a calm, productive, and stylish minimalist workspace that respects the planet.</p>
+    </section>
 
-          <div class="product-cta">
-            <!-- Replace AFFILIATE_LINK_PLACEHOLDER with your Amazon affiliate url for this product -->
-            <a class="btn btn-primary" href="AFFILIATE_LINK_PLACEHOLDER" target="_blank" rel="noopener noreferrer">Shop on Amazon</a>
-
-            <button class="save-btn" aria-pressed="false" onclick="toggleSave(this)" title="Save to Board">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7.5-4.35-9.2-6.05C1.6 13.65 2 9.9 5 8.2 7.1 6.9 9.1 8 12 11c2.9-3 4.9-4.1 7-2.8 3 1.7 3.4 5.45 2.2 6.75C19.5 16.65 12 21 12 21z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg>
-              <span class="visually-hidden">Save</span>
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Product: Desk Organizer -->
-      <article id="product-desk-organizer" class="product-card" aria-labelledby="title-desk-organizer">
-        <div class="product-media">
-          <img class="main-img" src="images/desk-organizer-main.jpg" alt="Desk Organizer main image">
-          <div class="thumb-row">
-            <img src="images/desk-organizer-thumb1.jpg" alt="Organizer compartments" onclick="swapImage('product-desk-organizer', this.src)" class="active">
-            <img src="images/desk-organizer-thumb2.jpg" alt="Organizer on desk" onclick="swapImage('product-desk-organizer', this.src)">
-            <img src="images/desk-organizer-thumb3.jpg" alt="Organizer uses" onclick="swapImage('product-desk-organizer', this.src)">
-          </div>
-        </div>
-
-        <div class="product-body">
-          <div class="product-meta">
-            <h4 id="title-desk-organizer" class="product-title">Desk Organizer — Modular</h4>
-            <div class="product-price">$29.99</div>
-          </div>
-
-          <p class="product-desc">Multi-compartment organizer for pens, cables, and small electronics — keeps your surface tidy.</p>
-
-          <ul class="feature-list">
-            <li>Modular design fits most desks</li>
-            <li>Reduces clutter & improves workflow</li>
-            <li>Durable, easy-to-clean finish</li>
-          </ul>
-
-          <div class="product-cta">
-            <a class="btn btn-primary" href="AFFILIATE_LINK_PLACEHOLDER" target="_blank" rel="noopener noreferrer">Shop on Amazon</a>
-
-            <button class="save-btn" aria-pressed="false" onclick="toggleSave(this)" title="Save to Board">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7.5-4.35-9.2-6.05C1.6 13.65 2 9.9 5 8.2 7.1 6.9 9.1 8 12 11c2.9-3 4.9-4.1 7-2.8 3 1.7 3.4 5.45 2.2 6.75C19.5 16.65 12 21 12 21z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg>
-              <span class="visually-hidden">Save</span>
-            </button>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Section 2: Ergonomics & Comfort -->
-  <section id="ergonomics-comfort" class="board-section" aria-labelledby="ergonomics-h">
-    <div class="section-header">
-      <div>
-        <h3 id="ergonomics-h">Ergonomics & Comfort</h3>
-        <p class="section-sub">Support your posture and maximize focus with ergonomic essentials.</p>
+    <!-- Generic, stable section id that doesn't need changing when you add similar products later -->
+    <section id="collection-01" class="section" aria-label="Airy Greens collection">
+      <div class="section-header">
+        <h2>Airy Greens — Easy-care office plants</h2>
+        <p>Low-maintenance, air-purifying plants that suit minimalist desks and home offices.</p>
       </div>
-      <p class="muted">Great for home offices</p>
-    </div>
 
-    <div class="pin-grid">
-      <!-- Product: Comfortable Chair -->
-      <article id="product-ergonomic-chair" class="product-card" aria-labelledby="title-ergonomic-chair">
-        <div class="product-media">
-          <img class="main-img" src="images/ergonomic-chair-main.jpg" alt="Comfortable chair main image">
-          <div class="thumb-row">
-            <img src="images/ergonomic-chair-thumb1.jpg" alt="Chair side" onclick="swapImage('product-ergonomic-chair', this.src)" class="active">
-            <img src="images/ergonomic-chair-thumb2.jpg" alt="Chair back support" onclick="swapImage('product-ergonomic-chair', this.src)">
-            <img src="images/ergonomic-chair-thumb3.jpg" alt="Chair in office" onclick="swapImage('product-ergonomic-chair', this.src)">
-          </div>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" data-target="collection-01-carousel" aria-label="Scroll left">‹</button>
+
+        <div id="collection-01-carousel" class="carousel" role="list">
+          <!-- Product 1: Snake Plant (with robust fallback for missing image) -->
+          <article id="snake-plant" class="product-card" role="listitem">
+            <div class="img-wrap">
+              <img
+                src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/snake_plant.jpg"
+                alt="Snake plant in a minimalist pot — ideal for low-light desks"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%27600%27 height=%27400%27><rect width=%27100%25%27 height=%27100%25%27 fill=%27%23f3f3f3%27/><text x=%2750%25%27 y=%2750%25%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23999%27 dy=%27.3em%27>Image%20unavailable</text></svg>';">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Snake Plant</h3>
+              <p class="product-desc">A hardy, low-light tolerant plant that helps filter indoor air — perfect for busy workspaces and beginners.</p>
+              <a class="cta" href="https://amzn.to/4iKbMvl" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- Product 2: ZZ Plant -->
+          <article id="zz-plant" class="product-card" role="listitem" data-pin="Pin2">
+            <div class="img-wrap">
+              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/zz_plant.jpg"
+                   alt="ZZ plant in a small pot — glossy leaves and very low maintenance" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">ZZ Plant</h3>
+              <p class="product-desc">Extremely tolerant and attractive; an elegant choice for a minimalist desk that needs a resilient plant.</p>
+              <a class="cta" href="https://amzn.to/4prSLR5" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- Product 3: Pothos -->
+          <article id="pothos" class="product-card" role="listitem" data-pin="Pin3">
+            <div class="img-wrap">
+              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/pothos.jpg"
+                   alt="Trailing pothos on a shelf beside a desk — easy to grow and propagate" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Pothos</h3>
+              <p class="product-desc">A trailing, forgiving plant that adds soft greenery; great for shelves or hanging planters near your workspace.</p>
+              <a class="cta" href="https://amzn.to/4iIUZbZ" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- Product 4: Aloe Vera -->
+          <article id="aloe-vera" class="product-card" role="listitem" data-pin="Pin4">
+            <div class="img-wrap">
+              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/aloe_vera.jpg"
+                   alt="Aloe vera succulent in a small pot — compact and functional" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Aloe Vera</h3>
+              <p class="product-desc">A compact succulent with beneficial gel; a tidy, minimalist option that needs infrequent watering.</p>
+              <a class="cta" href="https://amzn.to/44dvXMn" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- Product 5: Boston Fern -->
+          <article id="boston-fern" class="product-card" role="listitem" data-pin="Pin5">
+            <div class="img-wrap">
+              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/boston_fern.jpg"
+                   alt="Boston fern with lush fronds — great for adding texture and humidity" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Boston Fern</h3>
+              <p class="product-desc">A lush, feathery fern that thrives in humidity — ideal for a calm, green corner or near a windowed workspace.</p>
+              <a class="cta" href="https://amzn.to/4oKqjbZ" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
+            </div>
+          </article>
+
+          <!-- Product 6: Areca Palm -->
+          <article id="areca-palm" class="product-card" role="listitem" data-pin="Pin6">
+            <div class="img-wrap">
+              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/areca_palm.jpg"
+                   alt="Areca palm in a room — tall, air-purifying and stylish" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Areca Palm</h3>
+              <p class="product-desc">A graceful, air-purifying palm that adds height and texture—a statement plant for larger desk setups or corners.</p>
+              <a class="cta" href="https://amzn.to/4prNGYW" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
+            </div>
+          </article>
         </div>
 
-        <div class="product-body">
-          <div class="product-meta">
-            <h4 id="title-ergonomic-chair" class="product-title">Comfortable Chair — Lumbar Support</h4>
-            <div class="product-price">$199.00</div>
-          </div>
-
-          <p class="product-desc">Adjustable lumbar support and breathable mesh for all-day comfort.</p>
-
-          <ul class="feature-list">
-            <li>Ergonomic lumbar support</li>
-            <li>Adjustable height & tilt</li>
-            <li>Durable, breathable mesh</li>
-          </ul>
-
-          <div class="product-cta">
-            <a class="btn btn-primary" href="AFFILIATE_LINK_PLACEHOLDER" target="_blank" rel="noopener noreferrer">Shop on Amazon</a>
-
-            <button class="save-btn" aria-pressed="false" onclick="toggleSave(this)" title="Save to Board">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7.5-4.35-9.2-6.05C1.6 13.65 2 9.9 5 8.2 7.1 6.9 9.1 8 12 11c2.9-3 4.9-4.1 7-2.8 3 1.7 3.4 5.45 2.2 6.75C19.5 16.65 12 21 12 21z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg>
-              <span class="visually-hidden">Save</span>
-            </button>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Section 3: Decor & Wellness -->
-  <section id="decor-wellness" class="board-section" aria-labelledby="decor-h">
-    <div class="section-header">
-      <div>
-        <h3 id="decor-h">Decor & Wellness</h3>
-        <p class="section-sub">Add life and calm to your workspace with plants and decor.</p>
+        <button class="carousel-btn next" data-target="collection-01-carousel" aria-label="Scroll right">›</button>
       </div>
-      <p class="muted">A touch of greenery goes a long way</p>
+
+      <p class="section-note">Tip: Use the arrows to browse. Each product links to a trusted retailer.</p>
+    </section>
+
+    <!-- Scalable container for future sections (example placeholders, intentionally minimal) -->
+    <section id="more-sections" class="section muted">
+      <h2>More categories coming soon</h2>
+      <p>This template is built to scale — add more section blocks like the Airy Greens collection and they will follow the same layout.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Welcome to Minimalist EcoFinds. We expertly curate sustainable home office decor and eco-friendly desk essentials to help you build a calm, productive, and stylish workspace. Discover trusted, high-quality finds for a minimalist aesthetic that doesn't cost the earth. 🌿 Your guide to intentional, green living. Explore our boards and save your favorites!</p>
+
+      <div class="socials">
+        <!-- Clean, fixed-size Pinterest icon + text; clickable and accessible -->
+        <a class="pinterest-link" href="https://www.pinterest.com/minimalist_ecofinds/" target="_blank" rel="noopener noreferrer" aria-label="Visit Minimalist EcoFinds on Pinterest">
+          <span class="pinterest-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <path d="M12.003 2C6.48 2 2 6.477 2 12.004 2 16.03 4.69 19.356 8.446 20.385c-.12-.828-.228-2.103.048-3.01.248-.82 1.6-5.24 1.6-5.24s-.405-.81-.405-2.01c0-1.88 1.09-3.285 2.447-3.285 1.154 0 1.71.866 1.71 1.905 0 1.16-.735 2.9-1.115 4.516-.318 1.35.675 2.452 2.005 2.452 2.405 0 4.258-3.185 4.258-7.78 0-3.24-2.177-5.68-6.285-5.68-4.49 0-7.28 3.38-7.28 6.88 0 1.25.482 2.6 1.08 3.33.12.145.138.272.1.417-.11.45-.36 1.44-.41 1.64-.064.278-.208.338-.48.205-1.694-.792-2.45-3.154-2.45-5.076 0-4.153 3.01-8.13 8.68-8.13 4.558 0 8.096 3.255 8.096 7.61 0 4.56-2.877 8.235-6.87 8.235-1.34 0-2.603-.7-3.03-1.512 0 0-.72 2.76-.88 3.44-.268 1.03-1 2.04-1.486 2.845 1.064.33 2.19.51 3.374.51 5.523 0 10.003-4.477 10.003-10.004C22.005 6.477 17.526 2 12.003 2z"/>
+            </svg>
+          </span>
+          <span class="pinterest-text">/minimalist_ecofinds</span>
+        </a>
+      </div>
+
+      <p class="legal">I may earn a commission from qualifying purchases. Minimalist EcoFinds is an independent curator; we only feature items we consider useful for a minimalist, eco-conscious home office.</p>
     </div>
+  </footer>
 
-    <div class="pin-grid">
-      <!-- Product: Snake Plant -->
-      <article id="product-snake-plant" class="product-card" aria-labelledby="title-snake-plant">
-        <div class="product-media">
-          <img class="main-img" src="images/snake-plant-main.jpg" alt="Snake plant main image">
-          <div class="thumb-row">
-            <img src="images/snake-plant-thumb1.jpg" alt="Snake plant closeup" onclick="swapImage('product-snake-plant', this.src)" class="active">
-            <img src="images/snake-plant-thumb2.jpg" alt="Snake plant on desk" onclick="swapImage('product-snake-plant', this.src)">
-            <img src="images/snake-plant-thumb3.jpg" alt="Snake plant pot" onclick="swapImage('product-snake-plant', this.src)">
-          </div>
-        </div>
+  <script>
+  /* Simple carousel controls: left/right scroll by container width.
+     Works for any number of product sections referencing the carousel id
+  */
+  document.addEventListener('DOMContentLoaded', function () {
+    function initCarouselButtons() {
+      const buttons = document.querySelectorAll('.carousel-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.dataset.target;
+          const container = document.getElementById(targetId);
+          if (!container) return;
+          const scrollAmount = container.clientWidth * 0.9;
+          if (btn.classList.contains('next')) {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+          }
+        });
+      });
+    }
 
-        <div class="product-body">
-          <div class="product-meta">
-            <h4 id="title-snake-plant" class="product-title">Snake Plant — Air Purifying</h4>
-            <div class="product-price">$24.99</div>
-          </div>
+    initCarouselButtons();
 
-          <p class="product-desc">Low-maintenance plant that improves air quality and adds natural style to your desk.</p>
-
-          <ul class="feature-list">
-            <li>Removes toxins from the air</li>
-            <li>Low water & light needs</li>
-            <li>Stylish desktop pot included</li>
-          </ul>
-
-          <div class="product-cta">
-            <a class="btn btn-primary" href="AFFILIATE_LINK_PLACEHOLDER" target="_blank" rel="noopener noreferrer">Shop on Amazon</a>
-
-            <button class="save-btn" aria-pressed="false" onclick="toggleSave(this)" title="Save to Board">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7.5-4.35-9.2-6.05C1.6 13.65 2 9.9 5 8.2 7.1 6.9 9.1 8 12 11c2.9-3 4.9-4.1 7-2.8 3 1.7 3.4 5.45 2.2 6.75C19.5 16.65 12 21 12 21z" stroke="currentColor" stroke-width="1.2" fill="currentColor"/></svg>
-              <span class="visually-hidden">Save</span>
-            </button>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-</main>
-
-<footer style="padding:1rem 0; text-align:center; color:var(--muted); font-size:0.9rem;">
-  <small>Tip: For Pinterest pins set the destination URL to this page with the product anchor (e.g. yourdomain.com/#product-snake-plant)</small>
-</footer>
+    // Allow arrow keys navigation on focused collection carousel
+    const mainCarousel = document.getElementById('collection-01-carousel');
+    if (mainCarousel) {
+      mainCarousel.setAttribute('tabindex', '0');
+      mainCarousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') mainCarousel.scrollBy({ left: mainCarousel.clientWidth * 0.9, behavior: 'smooth' });
+        if (e.key === 'ArrowLeft') mainCarousel.scrollBy({ left: -mainCarousel.clientWidth * 0.9, behavior: 'smooth' });
+      });
+    }
+  });
+  </script>
+</body>
+</html>
