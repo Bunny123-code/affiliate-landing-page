@@ -18,6 +18,40 @@
   </noscript>
   <!-- end Pinterest Tag -->
 
+  <script>
+    pintrk('track', 'checkout', {
+    event_id: 'eventId0001',
+    value: 100,
+    order_quantity: 1,
+    currency: 'USD'
+    });
+  </script>
+
+  <script>
+    pintrk('track', 'pagevisit', {
+    event_id: 'eventId0001',
+    property: 'Athleta'
+    });
+  </script>
+
+  <script>
+    pintrk('track', 'lead', {
+    event_id: 'eventId0001',
+    lead_type: 'Newsletter'
+    });
+  </script>
+
+  <script>
+    pintrk('track', 'viewcategory', {
+    event_id: 'eventId0001',
+    line_items: [
+    {
+    product_category: 'Shoes'
+    }
+    ]
+    });
+  </script>
+  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Minimalist EcoFinds — Sustainable home & desk picks</title>
