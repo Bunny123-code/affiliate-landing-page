@@ -18,372 +18,119 @@
   </noscript>
   <!-- end Pinterest Tag -->
 
-  <script>
-    pintrk('track', 'checkout', {
-    event_id: 'eventId0001',
-    value: 100,
-    order_quantity: 1,
-    currency: 'USD'
-    });
-  </script>
-
-  <script>
-    pintrk('track', 'pagevisit', {
-    event_id: 'eventId0001',
-    property: 'Athleta'
-    });
-  </script>
-
-  <script>
-    pintrk('track', 'lead', {
-    event_id: 'eventId0001',
-    lead_type: 'Newsletter'
-    });
-  </script>
-
-  <script>
-    pintrk('track', 'viewcategory', {
-    event_id: 'eventId0001',
-    line_items: [
-    {
-    product_category: 'Shoes'
-    }
-    ]
-    });
-  </script>
-  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Minimalist EcoFinds — Sustainable home & desk picks</title>
-
-  <!-- Favicon (uses provided logo) -->
+  <title>Minimalist EcoFinds — Sustainable Living Blog</title>
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png">
-
-  <meta name="description" content="Minimalist EcoFinds — curated sustainable home office decor and eco-friendly desk essentials. I may earn a commission from qualifying purchases.">
-
-  <style>
-  :root{
-    --bg:#ffffff;
-    --muted:#6b6b6b;
-    --accent:#2f6b3b; /* subtle green */
-    --card:#fbfbfb;
-    --max-width:1100px;
-    --radius:10px;
-    --gap:18px;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    color:#111;
-  }
-
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text,#111);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.45;
-  }
-
-  .container{max-width:var(--max-width);margin:28px auto;padding:0 18px}
-
-  .site-header{
-    border-bottom:1px solid #eee;
-    padding:18px 0;
-    background:#fff;
-  }
-  .header-inner{
-    max-width:var(--max-width);
-    margin:0 auto;
-    display:flex;
-    gap:18px;
-    align-items:center;
-    padding:0 18px;
-  }
-  .logo{width:64px;height:64px;object-fit:contain}
-  /* Slightly larger banner but responsive */
-  .banner{max-width:560px;width:100%;height:auto;display:block}
-  .header-text{display:flex;flex-direction:column;gap:6px}
-  .tagline{margin:0;color:var(--muted);font-weight:600}
-
-  /* disclosure */
-  .disclosure{
-    margin:10px 18px 0;
-    color:var(--muted);
-    font-size:14px;
-  }
-
-  /* Collection header placed above the main lead */
-  .collection-header{
-    margin:22px 0 6px;
-    text-align:center;
-    font-size:18px;
-    color:var(--accent);
-    font-weight:700;
-  }
-
-  /* Lead */
-  .lead{padding:6px 0 22px}
-  .lead h1{margin:6px 0 6px;font-size:24px;text-align:center}
-  .lead p{margin:0;color:var(--muted);text-align:center;max-width:900px;margin-left:auto;margin-right:auto}
-
-  /* Section */
-  .section{margin:22px 0;padding:18px;border-radius:var(--radius)}
-  .section-header h2{margin:0 0 6px;font-size:20px}
-  .section-header p{margin:0 0 12px;color:var(--muted)}
-
-  /* Carousel layout */
-  .carousel-wrap{display:flex;align-items:center;gap:12px}
-  .carousel{display:flex;gap:var(--gap);overflow-x:auto;padding:8px 6px;scroll-behavior:smooth}
-  .carousel::-webkit-scrollbar{height:10px}
-  .carousel::-webkit-scrollbar-thumb{background:#ddd;border-radius:6px}
-  .product-card{
-    min-width:240px;
-    width:260px;
-    background:var(--card);
-    border-radius:10px;
-    box-shadow:0 6px 18px rgba(27,32,17,0.04);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-  }
-  .img-wrap{width:100%;height:160px;overflow:hidden;display:block}
-  .img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-
-  /* Product body */
-  .product-body{padding:12px 14px;display:flex;flex-direction:column;gap:10px;flex:1}
-  .product-title{font-size:16px;margin:0}
-  .product-desc{margin:0;color:var(--muted);font-size:14px}
-  .cta{
-    display:inline-block;
-    margin-top:auto;
-    padding:10px 12px;
-    background:var(--accent);
-    color:#fff;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:600;
-    text-align:center;
-  }
-
-  /* Carousel buttons */
-  .carousel-btn{
-    background:transparent;
-    border:1px solid #eee;
-    width:40px;height:40px;border-radius:999px;
-    display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted);
-    cursor:pointer;
-  }
-  .carousel-btn:active{transform:scale(.98)}
-
-  /* Footer */
-  .site-footer{margin-top:28px;border-top:1px solid #eee;background:#fff;padding:18px 0}
-  .footer-inner{max-width:var(--max-width);margin:0 auto;padding:0 18px;color:var(--muted);display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center}
-  .footer-inner p{margin:8px 0}
-  .legal{font-size:13px;color:#7a7a7a}
-
-  /* Pinterest icon and link sizing/fitting - fixed */
-  .socials{display:flex;gap:8px;align-items:center}
-  .pinterest-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-weight:600;padding:6px;border-radius:6px}
-  .pinterest-link:hover{background:#f6f7f6}
-  .pinterest-icon{width:20px;height:20px;flex-shrink:0;display:inline-block;vertical-align:middle}
-  .pinterest-icon svg{width:100%;height:100%;display:block}
-  .pinterest-text{font-size:14px;color:var(--accent)}
-
-  /* Ensure SVG uses currentColor */
-  .pinterest-link svg path{fill:currentColor}
-
-  /* Responsiveness */
-  @media (max-width:720px){
-    .header-inner{flex-direction:row;align-items:center}
-    .banner{max-width:320px}
-    .product-card{min-width:200px;width:220px}
-    .footer-inner{text-align:center;align-items:center}
-  }
-  </style>
+  
+  <meta name="description" content="Minimalist EcoFinds — A blog about sustainable living, eco-friendly products, and mindful consumption.">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
-      <img class="logo" src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png" alt="Minimalist EcoFinds logo">
-      <div class="header-text">
-        <img class="banner" src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Banner.png" alt="Minimalist EcoFinds banner — collection for sustainable, m[...]">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png" 
+               alt="Minimalist EcoFinds Logo" class="logo-img">
+          Minimalist EcoFinds
+        </a>
+        <nav class="main-nav">
+          <a href="/" class="nav-link active">Home</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+          <a href="/about.html" class="nav-link">About</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </nav>
       </div>
     </div>
-
-    <p class="disclosure">I may earn a commission from qualifying purchases.</p>
   </header>
 
-  <main class="container">
-
-    <!-- Collection header moved above the lead -->
-    <div class="collection-header">This is our collection for you!</div>
-
-    <!-- Intro / Lead -->
-    <section class="lead">
-      <h1>Welcome — curated sustainable plants & desk essentials</h1>
-      <p>Thoughtfully chosen items to help you build a calm, productive, and stylish minimalist workspace that respects the planet.</p>
-    </section>
-
-    <!-- Generic, stable section id that doesn't need changing when you add similar products later -->
-    <section id="collection-01" class="section" aria-label="Airy Greens collection">
-      <div class="section-header">
-        <h2>Airy Greens — Easy-care office plants</h2>
-        <p>Low-maintenance, air-purifying plants that suit minimalist desks and home offices.</p>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to Sustainable Living</h1>
+        <p>Discover practical tips, eco-friendly product reviews, and mindful living strategies for a more sustainable lifestyle. Join our journey towards minimalism and environmental consciousness.</p>
       </div>
+    </section>
 
-      <div class="carousel-wrap">
-        <button class="carousel-btn prev" data-target="collection-01-carousel" aria-label="Scroll left">‹</button>
+    <section class="container">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 2rem;">Latest Blog Posts</h2>
+      
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <article class="blog-card">
+          <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/snake_plant.png" 
+               alt="Sustainable Office Plants" class="blog-image">
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">Mar 15, 2024</span>
+              <span class="blog-category">Plants & Greenery</span>
+            </div>
+            <h3>5 Low-Maintenance Plants for Your Sustainable Workspace</h3>
+            <p>Discover the best air-purifying plants that thrive in office environments with minimal care requirements...</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
 
-        <div id="collection-01-carousel" class="carousel" role="list">
-          <!-- Product 1: Snake Plant (fixed: uses .png file that exists in repo) -->
-          <article id="snake-plant" class="product-card" role="listitem">
-            <div class="img-wrap">
-              <img
-                src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/snake_plant.png"
-                alt="Snake plant in a minimalist pot — ideal for low-light desks"
-                loading="lazy">
+        <!-- Blog Post 2 -->
+        <article class="blog-card">
+          <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/zz_plant.jpg" 
+               alt="Minimalist Desk Setup" class="blog-image">
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">Mar 10, 2024</span>
+              <span class="blog-category">Minimalism</span>
             </div>
-            <div class="product-body">
-              <h3 class="product-title">Snake Plant</h3>
-              <p class="product-desc">A hardy, low-light tolerant plant that helps filter indoor air — perfect for busy workspaces and beginners.</p>
-              <a class="cta" href="https://amzn.to/4iKbMvl" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
-            </div>
-          </article>
+            <h3>Creating a Minimalist Eco-Friendly Home Office</h3>
+            <p>Learn how to design a productive workspace that aligns with sustainable values and minimalist principles...</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
 
-          <!-- Product 2: ZZ Plant -->
-          <article id="zz-plant" class="product-card" role="listitem" data-pin="Pin2">
-            <div class="img-wrap">
-              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/zz_plant.jpg"
-                   alt="ZZ plant in a small pot — glossy leaves and very low maintenance" loading="lazy">
+        <!-- Blog Post 3 -->
+        <article class="blog-card">
+          <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/pothos.jpg" 
+               alt="Eco-Friendly Products" class="blog-image">
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">Mar 5, 2024</span>
+              <span class="blog-category">Product Reviews</span>
             </div>
-            <div class="product-body">
-              <h3 class="product-title">ZZ Plant</h3>
-              <p class="product-desc">Extremely tolerant and attractive; an elegant choice for a minimalist desk that needs a resilient plant.</p>
-              <a class="cta" href="https://amzn.to/4prSLR5" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
-            </div>
-          </article>
-
-          <!-- Product 3: Pothos -->
-          <article id="pothos" class="product-card" role="listitem" data-pin="Pin3">
-            <div class="img-wrap">
-              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/pothos.jpg"
-                   alt="Trailing pothos on a shelf beside a desk — easy to grow and propagate" loading="lazy">
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Pothos</h3>
-              <p class="product-desc">A trailing, forgiving plant that adds soft greenery; great for shelves or hanging planters near your workspace.</p>
-              <a class="cta" href="https://amzn.to/4iIUZbZ" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
-            </div>
-          </article>
-
-          <!-- Product 4: Aloe Vera -->
-          <article id="aloe-vera" class="product-card" role="listitem" data-pin="Pin4">
-            <div class="img-wrap">
-              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/aloe_vera.jpg"
-                   alt="Aloe vera succulent in a small pot — compact and functional" loading="lazy">
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Aloe Vera</h3>
-              <p class="product-desc">A compact succulent with beneficial gel; a tidy, minimalist option that needs infrequent watering.</p>
-              <a class="cta" href="https://amzn.to/44dvXMn" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
-            </div>
-          </article>
-
-          <!-- Product 5: Boston Fern -->
-          <article id="boston-fern" class="product-card" role="listitem" data-pin="Pin5">
-            <div class="img-wrap">
-              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/boston_fern.jpg"
-                   alt="Boston fern with lush fronds — great for adding texture and humidity" loading="lazy">
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Boston Fern</h3>
-              <p class="product-desc">A lush, feathery fern that thrives in humidity — ideal for a calm, green corner or near a windowed workspace.</p>
-              <a class="cta" href="https://amzn.to/4oKqjbZ" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
-            </div>
-          </article>
-
-          <!-- Product 6: Areca Palm -->
-          <article id="areca-palm" class="product-card" role="listitem" data-pin="Pin6">
-            <div class="img-wrap">
-              <img src="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/images/plants/areca_palm.jpg"
-                   alt="Areca palm in a room — tall, air-purifying and stylish" loading="lazy">
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Areca Palm</h3>
-              <p class="product-desc">A graceful, air-purifying palm that adds height and texture—a statement plant for larger desk setups or corners.</p>
-              <a class="cta" href="https://amzn.to/4prNGYW" target="_blank" rel="noopener noreferrer nofollow">Shop Now</a>
-            </div>
-          </article>
-        </div>
-
-        <button class="carousel-btn next" data-target="collection-01-carousel" aria-label="Scroll right">›</button>
+            <h3>Sustainable Alternatives to Common Desk Supplies</h3>
+            <p>Replace plastic and disposable office items with eco-friendly alternatives that reduce waste and last longer...</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
       </div>
-
-      <p class="section-note">Tip: Use the arrows to browse. Each product links to a trusted retailer.</p>
     </section>
-
-    <!-- Scalable container for future sections (example placeholders, intentionally minimal) -->
-    <section id="more-sections" class="section muted">
-      <h2>More categories coming soon</h2>
-      <p>This template is built to scale — add more section blocks like the Airy Greens collection and they will follow the same layout.</p>
-    </section>
-
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <p>Welcome to Minimalist EcoFinds. We expertly curate sustainable home office decor and eco-friendly desk essentials to help you build a calm, productive, and stylish workspace. Discover trusted[...]
-
-      <div class="socials">
-        <!-- Clean, fixed-size Pinterest icon + text; clickable and accessible -->
-        <a class="pinterest-link" href="https://www.pinterest.com/minimalist_ecofinds/" target="_blank" rel="noopener noreferrer" aria-label="Visit Minimalist EcoFinds on Pinterest">
-          <span class="pinterest-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <path d="M12.003 2C6.48 2 2 6.477 2 12.004 2 16.03 4.69 19.356 8.446 20.385c-.12-.828-.228-2.103.048-3.01.248-.82 1.6-5.24 1.6-5.24s-.405-.81-.405-2.01c0-1.88 1.09-3.285 2.447-3.285 1.15[...]
-            </svg>
-          </span>
-          <span class="pinterest-text">/minimalist_ecofinds</span>
-        </a>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Minimalist EcoFinds</div>
+        <nav class="footer-links">
+          <a href="/" class="footer-link">Home</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="/about.html" class="footer-link">About</a>
+          <a href="/contact.html" class="footer-link">Contact</a>
+          <a href="https://www.pinterest.com/minimalist_ecofinds/" class="footer-link" target="_blank">Pinterest</a>
+        </nav>
+        <p class="disclosure">Minimalist EcoFinds is a blog dedicated to sustainable living. I may earn a commission from qualifying purchases through affiliate links. All opinions and recommendations are my own.</p>
+        <p class="disclosure">&copy; 2024 Minimalist EcoFinds. All rights reserved.</p>
       </div>
-
-      <p class="legal">I may earn a commission from qualifying purchases. Minimalist EcoFinds is an independent curator; we only feature items we consider useful for a minimalist, eco-conscious home o[...]
     </div>
   </footer>
 
   <script>
-  /* Simple carousel controls: left/right scroll by container width.
-     Works for any number of product sections referencing the carousel id
-  */
-  document.addEventListener('DOMContentLoaded', function () {
-    function initCarouselButtons() {
-      const buttons = document.querySelectorAll('.carousel-btn');
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const targetId = btn.dataset.target;
-          const container = document.getElementById(targetId);
-          if (!container) return;
-          const scrollAmount = container.clientWidth * 0.9;
-          if (btn.classList.contains('next')) {
-            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-          } else {
-            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-          }
-        });
-      });
-    }
-
-    initCarouselButtons();
-
-    // Allow arrow keys navigation on focused collection carousel
-    const mainCarousel = document.getElementById('collection-01-carousel');
-    if (mainCarousel) {
-      mainCarousel.setAttribute('tabindex', '0');
-      mainCarousel.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') mainCarousel.scrollBy({ left: mainCarousel.clientWidth * 0.9, behavior: 'smooth' });
-        if (e.key === 'ArrowLeft') mainCarousel.scrollBy({ left: -mainCarousel.clientWidth * 0.9, behavior: 'smooth' });
-      });
-    }
-  });
+    // Pinterest tracking for homepage
+    pintrk('track', 'pagevisit', {
+      event_id: 'homepage_visit',
+      property: 'Minimalist EcoFinds Blog'
+    });
   </script>
 </body>
 </html>
