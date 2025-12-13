@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- COPY YOUR PINTEREST & HEAD CODE FROM index.html HERE -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[BLOG POST TITLE] - Minimalist EcoFinds</title>
+    <style>
+        /* === BASE STYLES (Copy from your index.html) === */
+        :root {
+            --bg: #ffffff; --text: #111111; --muted: #6b6b6b; --accent: #2E8B57;
+            --light-accent: #e8f5e9; --card: #fbfbfb; --border: #eeeeee;
+            --max-width: 800px; /* Narrower for better reading */
+            --radius: 10px; --gap: 24px;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg); color: var(--text); line-height: 1.6;
+            display: flex; flex-direction: column; min-height: 100vh;
+        }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; width: 100%;}
+        /* === HEADER/FOOTER STYLES - Ensure these match your site === */
+        /* ... (You will copy the full header & footer CSS from your index.html here) ... */
+
+        /* === POST-SPECIFIC STYLES === */
+        .post-hero {
+            text-align: center; padding: 60px 0 40px;
+        }
+        .post-hero h1 { font-size: 2.5rem; margin-bottom: 16px; line-height: 1.2;}
+        .post-meta {
+            color: var(--muted); font-size: 0.95rem; margin-bottom: 40px;
+            padding-bottom: 20px; border-bottom: 1px solid var(--border);
+        }
+        .post-content {
+            padding: 20px 0 80px; font-size: 1.125rem; line-height: 1.7;
+        }
+        .post-content h2 { color: var(--accent); margin: 2em 0 1em; }
+        .post-content p { margin-bottom: 1.5em; }
+        .post-content img {
+            width: 100%; height: auto; border-radius: var(--radius);
+            margin: 2em 0; display: block;
+        }
+        .affiliate-cta {
+            background: var(--light-accent); padding: 30px; border-radius: var(--radius);
+            border-left: 4px solid var(--accent); margin: 3em 0; text-align: center;
+        }
+        .affiliate-cta a {
+            background: var(--accent); color: white; padding: 15px 30px;
+            border-radius: 6px; text-decoration: none; font-weight: 600;
+            display: inline-block; margin-top: 15px;
+        }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--accent); font-weight: 600;}
+    </style>
+</head>
+<body>
+
+    <!-- === HEADER === -->
+    <!-- COPY THE ENTIRE <header class="site-header">...</header> BLOCK FROM YOUR index.html AND PASTE IT HERE -->
+
+    <main>
+        <article class="container">
+            <!-- POST HERO -->
+            <header class="post-hero">
+                <!-- REPLACE THE TEXT INSIDE THESE TAGS -->
+                <h1>[BLOG POST TITLE GOES HERE]</h1>
+                <div class="post-meta">
+                    Published on <time datetime="2024-01-01">[Date]</time> | Category: [Category Name]
+                </div>
+            </header>
+
+            <!-- FEATURED IMAGE -->
+            <!-- REPLACE featured-image.jpg WITH YOUR IMAGE FILENAME -->
+            <img src="../images/blog/posts/[YOUR-FEATURED-IMAGE.jpg]" alt="[Describe the featured image]" class="featured-img">
+
+            <!-- POST CONTENT -->
+            <div class="post-content">
+                <!-- REPLACE ALL THIS PLACEHOLDER TEXT WITH YOUR ARTICLE -->
+                <p>This is the beginning of your blog post. Write your engaging introduction here.</p>
+
+                <h2>[Your First Subheading]</h2>
+                <p>Expand on your topic here. This is where you provide detailed information, tips, and insights.</p>
+
+                <!-- AFFILIATE LINK SPOT -->
+                <div class="affiliate-cta">
+                    <h3>Check Price on [Product Name]</h3>
+                    <p>If you're interested in [product], you can find it here.</p>
+                    <!-- REPLACE # WITH YOUR AFFILIATE LINK -->
+                    <a href="#" target="_blank" rel="noopener">Check Current Price →</a>
+                </div>
+
+                <h2>[Your Second Subheading]</h2>
+                <p>Continue with more valuable content for your reader.</p>
+
+                <!-- ADD MORE PARAGRAPHS, HEADINGS, AND IMAGES AS NEEDED -->
+            </div>
+
+            <!-- BACK LINK -->
+            <a href="../sections/[RELATED-SECTION-FILE.html]" class="back-link">← Back to [Section Name] Overview</a>
+        </article>
+    </main>
+
+    <!-- === FOOTER === -->
+    <!-- COPY THE ENTIRE <footer class="site-footer">...</footer> BLOCK FROM YOUR index.html AND PASTE IT HERE -->
+
+</body>
+</html>
