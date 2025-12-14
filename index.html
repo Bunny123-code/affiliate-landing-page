@@ -229,6 +229,16 @@
     max-width: 600px;
     margin: 0 auto 30px;
   }
+
+    /* FIX FOR BLOG IMAGE HEIGHT - ADD AT END OF STYLE TAG */
+.blog-card img.blog-image {
+    height: 80px !important;
+    width: 100% !important;
+    max-height: 100px !important;
+    min-height: 50px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
     
   .coming-soon {
     display: inline-block;
@@ -381,14 +391,6 @@
       padding: 40px 0 30px;
     }
 
-/* Fix for blog image height - add this AFTER existing .blog-image rules */
-article.blog-card > img.blog-image {
-    height: 80px !important;
-    width: 100% !important;
-    max-width: 100%;
-    object-fit: cover !important;
-    display: block;
-}
   }
   </style>
 </head>
@@ -434,7 +436,7 @@ article.blog-card > img.blog-image {
 </div>
       
 <article class="blog-card">
-    <img src="images/blog/cozy-productive-workspace.png" alt="A productive minimalist desk with plants" class="blog-image">
+    <img src="images/blog/cozy-productive-workspace.png" alt="A productive minimalist desk with plants" class="blog-image" style="height: 200px !important; width: 100% !important; object-fit: cover !important;>
     <div class="blog-content">
         <div class="blog-meta">
             <span class="blog-date">Dec 14, 2025</span>
