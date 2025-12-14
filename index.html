@@ -381,10 +381,13 @@
       padding: 40px 0 30px;
     }
 
-article.blog-card img.blog-image {
+/* Fix for blog image height - add this AFTER existing .blog-image rules */
+article.blog-card > img.blog-image {
     height: 80px !important;
-    width: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    max-width: 100%;
+    object-fit: cover !important;
+    display: block;
 }
   }
   </style>
