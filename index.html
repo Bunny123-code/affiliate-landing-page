@@ -16,47 +16,11 @@
   <img height="1" width="1" style="display:none;" alt=""
     src="https://ct.pinterest.com/v3/?event=init&tid=2613675955384&pd[em]=<hashed_email_address>&noscript=1" />
   </noscript>
-  <!-- end Pinterest Tag -->
 
-  <script>
-    pintrk('track', 'checkout', {
-    event_id: 'eventId0001',
-    value: 100,
-    order_quantity: 1,
-    currency: 'USD'
-    });
-  </script>
-
-  <script>
-    pintrk('track', 'pagevisit', {
-    event_id: 'eventId0001',
-    property: 'Athleta'
-    });
-  </script>
-
-  <script>
-    pintrk('track', 'lead', {
-    event_id: 'eventId0001',
-    lead_type: 'Newsletter'
-    });
-  </script>
-
-  <script>
-    pintrk('track', 'viewcategory', {
-    event_id: 'eventId0001',
-    line_items: [
-    {
-    product_category: 'Shoes'
-    }
-    ]
-    });
-  </script>
-  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Minimalist EcoFinds - Sustainable Living Guide</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Bunny123-code/affiliate-landing-page/main/logo/EcoFinds_Logo.png">
 
   <meta name="description" content="Discover how Minimalist EcoFinds curates honest sustainable living guides for minimalist home decor and productive workspace design. Transparency first.">
@@ -165,7 +129,7 @@
     background: var(--light-accent);
   }
 
-  /* ===== HERO / BLOG INTRO ===== */
+  /* ===== HERO ===== */
   .hero {
     padding: 60px 0 40px;
     text-align: center;
@@ -187,7 +151,7 @@
     margin-bottom: 30px;
   }
 
-  /* ===== BLOG SECTIONS PREVIEW ===== */
+  /* ===== BLOG SECTIONS ===== */
   .sections-container {
     padding: 40px 0 80px;
   }
@@ -209,7 +173,6 @@
     margin: 0 auto;
   }
 
-  /* ===== BLOG CARDS (FIXED CSS) ===== */
   .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -232,7 +195,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
-  /* THIS IS THE FIX FOR YOUR IMAGE SIZING ISSUE */
   .blog-image {
     width: 100%;
     height: 250px;
@@ -519,7 +481,7 @@
     </div>
   </header>
 
-  <!-- ===== MAIN BLOG CONTENT ===== -->
+  <!-- ===== MAIN CONTENT ===== -->
   <main>
     <section class="hero">
       <div class="container">
@@ -538,6 +500,20 @@
         <!-- BLOG CARDS GRID -->
         <div class="blog-grid">
           
+          <!-- NEW: Plant Protection Blog -->
+          <article class="blog-card">
+            <img src="images/blog/healthy-plant-workspace.png" alt="Healthy thriving desk plants on workspace" class="blog-image">
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-date">Jan 12, 2026</span>
+                <span class="blog-category">Plant Care</span>
+              </div>
+              <h3>12 Ways to Protect Your Desk Plants From Common Threats</h3>
+              <p>Stop killing your desk plants. Discover 12 proven protection methods against overwatering, pests, low light, and other common threats.</p>
+              <a href="blogs/sections/12-ways-protect-desk-plants.html" class="read-more">Read Guide →</a>
+            </div>
+          </article>
+
           <!-- Blog Card 1: Desk Plants -->
           <article class="blog-card">
             <img src="images/blog/cozy-productive-workspace.png" alt="A productive minimalist desk with plants" class="blog-image">
@@ -566,7 +542,7 @@
             </div>
           </article>
 
-          <!-- Blog Card 3: Creating Spaces That Breathe -->
+          <!-- Blog Card 3: Creating Spaces -->
           <article class="blog-card">
             <img src="images/blog/sunlit-tranquil-room.png" alt="A tranquil minimalist space that breathes" class="blog-image">
             <div class="blog-content">
@@ -580,7 +556,7 @@
             </div>
           </article>
 
-          <!-- Blog Card 4: Thriving Through Winter (NEW) -->
+          <!-- Blog Card 4: Winter Guide -->
           <article class="blog-card">
             <img src="images/blog/cozy-winter-living-room.png" alt="Cozy winter living room with sustainable warmth" class="blog-image">
             <div class="blog-content">
@@ -594,7 +570,7 @@
             </div>
           </article>
 
-          <!-- Blog Card 5: Energy-Saving Tech (NEW) -->
+          <!-- Blog Card 5: Energy-Saving Tech -->
           <article class="blog-card">
             <img src="images/blog/energy-efficient-home-setup.jpg" alt="Energy-efficient home office with smart tech" class="blog-image">
             <div class="blog-content">
@@ -624,7 +600,6 @@
   <footer class="site-footer" id="contact">
     <div class="container">
       <div class="footer-content">
-        <!-- Newsletter Section -->
         <div class="newsletter-section" id="newsletter">
           <h3>Join Our Newsletter</h3>
           <p>Get sustainable living tips, new product finds, and exclusive content straight to your inbox.</p>
@@ -634,7 +609,6 @@
           </form>
         </div>
         
-        <!-- Contact Section -->
         <div class="contact-section">
           <h3>Get In Touch</h3>
           <div class="contact-info">
@@ -657,16 +631,13 @@
   </footer>
 
   <script>
-  // Smooth scrolling for navigation links to footer sections
+  // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       if (this.getAttribute('href') === '#') return;
-      
       e.preventDefault();
-      
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
-      
       if (targetElement) {
         window.scrollTo({
           top: targetElement.offsetTop - 80,
@@ -676,42 +647,19 @@
     });
   });
 
-  // Newsletter form submission
+  // Newsletter form
   document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
     const email = this.querySelector('input[type="email"]').value;
-    
-    // Pinterest tracking for newsletter signup
-    pintrk('track', 'lead', {
-      event_id: 'newsletter_subscription',
-      lead_type: 'Newsletter',
-      user_email: email
-    });
-    
-    // Show success message
+    if (typeof pintrk !== 'undefined') {
+      pintrk('track', 'lead', {
+        event_id: 'newsletter_subscription',
+        lead_type: 'Newsletter',
+        user_email: email
+      });
+    }
     alert('Thank you for subscribing! You\'ll hear from us soon.');
     this.reset();
-  });
-
-  // Update active navigation link on scroll
-  window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY + 100;
-    const sections = document.querySelectorAll('section[id]');
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      const sectionId = section.getAttribute('id');
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        document.querySelectorAll('.nav-link').forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
   });
   </script>
 </body>
